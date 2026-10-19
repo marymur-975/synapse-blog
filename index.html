@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СИНАПС — блог о технологиях, которые думают</title>
+  <meta name="description" content="СИНАПС — исследовательская AI-компания. Блог о больших языковых моделях, агентах, инженерии данных и будущем интерфейсов.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%8C%81%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">⌁</span>
+        <span>СИ<b>НАПС</b></span>
+      </a>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" data-theme-btn title="Переключить тему">☀️</button>
+        <a class="btn btn-primary header-cta" href="articles.html">Читать блог</a>
+        <button class="icon-btn burger" id="burger" title="Меню">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-main reveal">
+        <span class="hero-eyebrow"><span class="dot"></span> AI-first медиа · новые материалы каждую неделю</span>
+        <h1 class="hero-title">Пишем о технологиях, которые <span class="grad-text">думают</span></h1>
+        <p class="hero-sub">СИНАПС — исследовательская AI-компания. Разбираем модели, агентов и инженерию данных без хайпа: только практика, цифры и опыт нашей команды.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="articles.html">📖 Все статьи</a>
+          <a class="btn btn-ghost" href="about.html">О компании</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="stat-tile reveal d1">
+          <div class="stat-num g1" id="stat-articles">—</div>
+          <div class="stat-label">статей в блоге · <span id="stat-cats">—</span> рубрик</div>
+        </div>
+        <div class="stat-tile reveal d2">
+          <div class="stat-num g2" id="stat-views">—</div>
+          <div class="stat-label">прочтений · растёт прямо сейчас</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Свежие материалы -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2 class="section-title">Свежие материалы</h2>
+          <div class="section-sub">Отобрано редакцией — от пост-скейлинга до conversational UX</div>
+        </div>
+        <a class="section-link" href="articles.html">Смотреть все →</a>
+      </div>
+      <div class="bento" id="featured-bento"></div>
+    </div>
+  </section>
+
+  <!-- Рубрики -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h2 class="section-title">Рубрики</h2>
+          <div class="section-sub">Шесть направлений, за которыми мы следим ежедневно</div>
+        </div>
+      </div>
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+  </section>
+
+  <!-- Популярное + подписка -->
+  <section class="section">
+    <div class="container pop-grid">
+      <div class="pop-tile reveal">
+        <div class="section-head" style="margin-bottom:8px">
+          <div>
+            <h2 class="section-title" style="font-size:24px">🔥 Сейчас читают</h2>
+            <div class="section-sub">Топ-5 по просмотрам</div>
+          </div>
+        </div>
+        <div id="popular-list"></div>
+      </div>
+      <div class="newsletter reveal d1">
+        <div>
+          <h3>Дайджест СИНАПС</h3>
+          <p>Одно письмо в неделю: главные тексты, разборы и то, что не попало в блог.</p>
+        </div>
+        <form class="newsletter-form" data-newsletter>
+          <input type="email" placeholder="you@company.ai" required>
+          <button class="btn btn-primary" type="submit">Подписаться</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="logo" href="index.html"><span class="logo-mark">⌁</span><span>СИ<b>НАПС</b></span></a>
+          <p>Исследовательская AI-компания. Строим агентов, пишем о том, что узнали.</p>
+        </div>
+        <div>
+          <h6>Рубрики</h6>
+          <div class="footer-links">
+            <a href="articles.html?cat=models">🧠 Модели</a>
+            <a href="articles.html?cat=dev">⚙️ Разработка</a>
+            <a href="articles.html?cat=industry">📈 Индустрия</a>
+            <a href="articles.html?cat=ethics">⚖️ Этика</a>
+          </div>
+        </div>
+        <div>
+          <h6>Навигация</h6>
+          <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="articles.html">Все статьи</a>
+            <a href="about.html">О компании</a>
+            <a href="articles.html?q=RAG">Поиск: RAG</a>
+          </div>
+        </div>
+        <div>
+          <h6>Связь</h6>
+          <div class="footer-links">
+            <a href="mailto:hello@synapse.ai">hello@synapse.ai</a>
+            <a href="about.html#team">Команда</a>
+            <a href="about.html#values">Принципы</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> СИНАПС. Все права защищены.</span>
+        <span>Собрано вручную: HTML · CSS · JS. Без фреймворков и трекеров.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/engine.js"></script>
+</body>
+</html>
